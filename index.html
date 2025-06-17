@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT LISTING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "container">
+        <h1>Product Search</h1>
+        <div class = "controls">
+            <input type="text" id="search-input" placeholder="Search for products...">
+            <button onclick="searchProducts()">Search</button>
+            <select id="sort-select" onchange="sortProducts()">
+                <option value="">Sort by</option>
+                <option value="priceAsc">Price: Low to High</option>
+                <option value="priceDesc">Price: High to Low</option>
+                <option value="ratingDesc">Rating: High to Low</option>
+            </select>
+            <input type="number" id="min-price" placeholder="Min Price" />
+            <input type="number" id="max-price" placeholder="Max Price" />
+            <button onclick="applyFilter()">Filter</button>
+        </div>
+        <div id="products" class="product"></div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
